@@ -22,7 +22,7 @@ function sumFibs(num){
 
     var newArr = [];
     for(var i = 0; i < arr.length; i++){
-        if(arr[i] < num){
+        if(arr[i] <= num){
            newArr.push(arr[i]);
         }
     }
