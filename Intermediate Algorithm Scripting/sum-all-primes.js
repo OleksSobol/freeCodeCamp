@@ -1,27 +1,22 @@
-function sumFibs(num){
-	var first = 1;
-	var second = 1;
 
-
-	var arr = [1];
-	var sum = 1;
-
-	var i = 1;
-
-	while(i<=num){
-		arr.push(sum);
-
-		sum = first + second;
-		first = second;
-		second = sum;
-		i++;
-	}
-	arr = arr.filter(function(number){
-		return (number % 2);
-	});
-
-	sum = arr.reduce((a, b) => a+b, 0);
-	return sum;
-
+function sumPrimes(num) {
+  var sum = 0;
+  function isPrime(val){
+    for(var i = 2; i < val;i++){
+      if(val % i == 0){
+        return false;
+      }
+    }
+    return true;
+  }
+  
+  for(var i = 2; i <= num; i++){
+    if(isPrime(i)){
+      sum+=i;
+    }
+  }
+  
+  return sum;
 }
-print(sumFibs(4));
+
+sumPrimes(10);
