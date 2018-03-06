@@ -16,6 +16,12 @@ function sumFibs(num){
 		second = sum;
 		i++;
 	}
-	return arr;
+	arr = arr.filter(function(number){
+		return (number % 2);
+	});
+
+	sum = arr.reduce((a, b) => a+b, 0);
+	return sum;
+
 }
-sumFibs(4);
+print(sumFibs(4));
