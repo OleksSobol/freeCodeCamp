@@ -20,16 +20,8 @@ function sumFibs(num){
 		return (number % 2);
 	});
 
-    var newArr = [];
-    for(var i = 0; i < arr.length; i++){
-        if(arr[i] < num){
-           newArr.push(arr[i]);
-        }
-    }
-    
-    sum = newArr.reduce((a, b) => a+b, 0);
-	
+	sum = arr.reduce((a, b) => a+b, 0);
 	return sum;
 
 }
-print(sumFibs(1000));
+print(sumFibs(4));
